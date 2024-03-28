@@ -34,7 +34,7 @@ namespace PizzaStore_UML2
 
         public void UpdateCustomer(Customer oldCustomer, Customer newCustomer)
         {
-            //This deletes an old Customer, and puts in a new Customer
+            //This deletes an already existing Customer, and creates a new Customer
             int index = customers.IndexOf(oldCustomer);
             if (index != -1)
             {
@@ -60,7 +60,7 @@ namespace PizzaStore_UML2
             pizzas.Remove(pizza);
         }
 
-        //This deletes an old pizza, and puts in a new pizza
+        //This deletes an already existing pizza, and creates a new pizza
         public void UpdatePizza(Pizza oldPizza, Pizza newPizza) 
         {
             int index = pizzas.IndexOf(oldPizza);
