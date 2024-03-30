@@ -125,7 +125,6 @@ namespace PizzaStore_UML2
                     case "7":
                         Console.WriteLine("Placing Order:");
                         Console.WriteLine("Available Customers:");
-
                         store.PrintCustomerList();
                         Console.Write("Enter customer name: ");
 
@@ -137,9 +136,9 @@ namespace PizzaStore_UML2
                             break;
                         }
 
-                        Console.WriteLine("Available Pizzas:");
+                        Console.WriteLine("Available Pizzas: ");
                         store.ShowPizza();
-                        Console.Write("Enter pizza name: ");
+                        Console.Write("Enter a name of a pizza: ");
                         string pizzaNameForOrder = Console.ReadLine()!;
                         Pizza selectedPizza = store.PizzaSearch(pizzaNameForOrder);
 
