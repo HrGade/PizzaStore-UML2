@@ -144,6 +144,10 @@ namespace PizzaStore_UML2
             Console.WriteLine("What is your name & address?");
             Console.WriteLine();
 
+            CreatePizza(pizza1);
+            CreatePizza(pizza2);
+            CreatePizza(pizza3);
+
             OrderCreate(order1);
             OrderCreate(order2);
             OrderCreate(order3);
