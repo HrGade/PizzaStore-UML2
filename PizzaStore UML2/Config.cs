@@ -12,7 +12,7 @@ namespace PizzaStore_UML2
     internal class Config
 
     {
-        public void Start()
+        public void CreateOrder()
         {
             Store store = new Store();  
             store.Start();

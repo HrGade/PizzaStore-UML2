@@ -9,7 +9,7 @@ namespace PizzaStore_UML2
             {
 
                 Config ConfigurateOrder = new Config();
-                ConfigurateOrder.Start();       
+                ConfigurateOrder.CreateOrder();       
             }
         }
     }
