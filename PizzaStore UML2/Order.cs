@@ -28,7 +28,7 @@ namespace PizzaStore_UML2
         public override string ToString()
         {
             decimal totalPrice = CalculateTotalPrice();
-            return $"Order: {Pizza.Name} inkl. moms: {totalPrice}";
+            return $"{Pizza.Name} inkl. moms: {totalPrice}";
         }
     }
 }

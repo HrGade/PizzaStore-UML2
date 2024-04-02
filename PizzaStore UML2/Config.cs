@@ -17,7 +17,6 @@ namespace PizzaStore_UML2
             Store store = new Store();  
             store.Start();
             Console.WriteLine();
-            Console.WriteLine("Welcome to Pizza Store!");
             Console.WriteLine();
             Console.WriteLine("Choose an option:");
             Console.WriteLine("1. Add Customer");

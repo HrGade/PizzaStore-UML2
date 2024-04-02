@@ -137,16 +137,18 @@ namespace PizzaStore_UML2
             Order order2 = new Order(pizza2, customer2);
             Order order3 = new Order(pizza3, customer3);
 
-            // Adding Customer, pizzas & orders to the menu of the store
+            /* Adding Customer, pizzas & orders to the menu of the*/
 
-            CreatePizza(pizza1);
-            CreatePizza(pizza2);
-            CreatePizza(pizza3);
-
+            Console.WriteLine("Welcome to Pizza Store!");
+            Console.WriteLine("What pizza do you like?");
+            Console.WriteLine("What is your name & address?");
             Console.WriteLine();
+
+            OrderCreate(order1);
+            OrderCreate(order2);
+            OrderCreate(order3);
             Console.WriteLine("Pizza List:");
-            ShowPizza();
-            Console.WriteLine();
+            ShowOrderList();
         }
 
 
