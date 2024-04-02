@@ -140,7 +140,7 @@ namespace PizzaStore_UML2
             /* Adding Customer, pizzas & orders to the menu of the*/
 
             Console.WriteLine("Welcome to Pizza Store!");
-            Console.WriteLine("What pizza do you like?");
+            Console.WriteLine("Which pizza do you like?");
             Console.WriteLine("What is your name & address?");
             Console.WriteLine();
 
