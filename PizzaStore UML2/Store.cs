@@ -80,25 +80,25 @@ namespace PizzaStore_UML2
         }
 
         //Searches available pizzas
-        public Pizza PizzaSearch(string name)
+        public Pizza SearchPizza(string name)
         {
             return pizzas.FirstOrDefault(pizza => pizza.Name.Equals(name))!;
         }
 
         //Create an order for customer 
-        public void CreateOrder(Order order)
+        public void OrderCreate(Order order)
         {
             orders.Add(order);
         }
 
         //Delete an order
-        public void OrderDelete(Order order)
+        public void DeleteOrder(Order order)
         {
             orders.Remove(order);
         }
 
         //This deletes an old order, and puts in a new order
-        public void OrderUpdate(Order oldOrder, Order newOrder)
+        public void Update(Order oldOrder, Order newOrder)
         {
             int index = orders.IndexOf(oldOrder);
             if (index != -1)
@@ -108,7 +108,7 @@ namespace PizzaStore_UML2
         }
 
         //Search for an order
-        public Order OrderSearch(Func<Order, bool> predicate)
+        public Order SearchOrder(Func<Order, bool> predicate)
         {
             return orders.FirstOrDefault(predicate)!;
         }
@@ -138,28 +138,15 @@ namespace PizzaStore_UML2
             Order order3 = new Order(pizza3, customer3);
 
             // Adding Customer, pizzas & orders to the menu of the store
-            AddCustomer(customer1);
-            AddCustomer(customer2);
-            AddCustomer(customer3);
 
             CreatePizza(pizza1);
             CreatePizza(pizza2);
             CreatePizza(pizza3);
 
-            CreateOrder(order1);
-            CreateOrder(order2);
-            CreateOrder(order3);
-
-            Console.WriteLine("Customer List:");
-            PrintCustomerList();
             Console.WriteLine();
-
             Console.WriteLine("Pizza List:");
             ShowPizza();
             Console.WriteLine();
-
-            Console.WriteLine("Order List:");
-            ShowOrderList();
         }
 
 

@@ -96,7 +96,7 @@ namespace PizzaStore_UML2
                     case "5":
                         Console.Write("Enter pizza name to remove: ");
                         string removePizzaName = Console.ReadLine()!;
-                        Pizza removePizza = store.PizzaSearch(removePizzaName);
+                        Pizza removePizza = store.SearchPizza(removePizzaName);
                         if (removePizza != null)
                         {
                             store.DeletePizza(removePizza);
@@ -111,8 +111,9 @@ namespace PizzaStore_UML2
                     case "6":
                         Console.Write("Enter pizza name to search: ");
                         string pizzaNameToSearch = Console.ReadLine()!;
-                        Pizza searchedPizza = store.PizzaSearch(pizzaNameToSearch);
+                        Pizza searchedPizza = store.SearchPizza(pizzaNameToSearch);
                         if (searchedPizza != null)
+
                         {
                             Console.WriteLine($"Pizza found: {searchedPizza}");
                         }
@@ -140,7 +141,7 @@ namespace PizzaStore_UML2
                         store.ShowPizza();
                         Console.Write("Enter a name of a pizza: ");
                         string pizzaNameForOrder = Console.ReadLine()!;
-                        Pizza selectedPizza = store.PizzaSearch(pizzaNameForOrder);
+                        Pizza selectedPizza = store.SearchPizza(pizzaNameForOrder);
 
                         if (selectedPizza == null)
                         {
@@ -149,7 +150,7 @@ namespace PizzaStore_UML2
                         }
 
                         Order newOrder = new Order(selectedPizza, selectedCustomer);
-                        store.CreateOrder(newOrder);
+                        store.OrderCreate(newOrder);
                         Console.WriteLine("Order placed successfully!");
                         break;
 
