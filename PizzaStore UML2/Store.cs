@@ -108,9 +108,9 @@ namespace PizzaStore_UML2
         }
 
         //Search for an order
-        public Order SearchOrder(Func<Order, bool> predicate)
+        public Order SearchOrder(Func<Order, bool> OrderSearch)
         {
-            return orders.FirstOrDefault(predicate)!;
+            return orders.FirstOrDefault(OrderSearch)!;
         }
 
         //Shows available orders
