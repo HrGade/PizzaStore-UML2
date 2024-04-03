@@ -126,12 +126,12 @@ namespace PizzaStore_UML2
         {
             // Making new pizzas & orders.
             Pizza pizza1 = new Pizza("Margherita", 100);
-            Pizza pizza2 = new Pizza("Pepperoni", 120);
-            Pizza pizza3 = new Pizza("Vegetarian", 110);
+            Pizza pizza2 = new Pizza("Salat Pizza", 120);
+            Pizza pizza3 = new Pizza("Greek Pizza", 110);
 
-            Customer customer1 = new Customer("Customer", "1");
-            Customer customer2 = new Customer("Customer", "2");
-            Customer customer3 = new Customer("Customer", "3");
+            Customer customer1 = new Customer("Peter", "Jyllinge");
+            Customer customer2 = new Customer("Torben", "Brønshøj");
+            Customer customer3 = new Customer("Niels", "Herlev");
 
             Order order1 = new Order(pizza1, customer1);
             Order order2 = new Order(pizza2, customer2);
@@ -148,11 +148,16 @@ namespace PizzaStore_UML2
             CreatePizza(pizza2);
             CreatePizza(pizza3);
 
+            AddCustomer(customer1);
+            AddCustomer(customer2); 
+            AddCustomer(customer3);
+
             OrderCreate(order1);
             OrderCreate(order2);
             OrderCreate(order3);
             Console.WriteLine("Pizza List:");
             ShowOrderList();
+            
         }
 
 

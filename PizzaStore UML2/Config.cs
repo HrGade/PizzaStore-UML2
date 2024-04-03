@@ -26,23 +26,23 @@ namespace PizzaStore_UML2
             Console.WriteLine("5. Remove Pizza");
             Console.WriteLine("6. Search Pizza");
             Console.WriteLine("7. Place Order");
-            Console.WriteLine("8. Exit");
+            Console.WriteLine("8. Exit"); 
 
             bool UntilOrderConfirm = true;
             while (UntilOrderConfirm)
             {
-                Console.Write("Enter your choice: ");
+                Console.Write("How can we serve you? ");
                 string input = Console.ReadLine()!;
 
                 switch (input)
                 {
                     case "1":
-                        Console.Write("Enter customer name: ");
+                        Console.Write("Enter name of customer: ");
                         string name = Console.ReadLine()!;
-                        Console.Write("Enter customer address: ");
+                        Console.Write("Enter address of the customer: ");
                         string address = Console.ReadLine()!;
                         store.AddCustomer(new Customer(name, address));
-                        Console.WriteLine("Customer added successfully!");
+                        Console.WriteLine("Customer successfully added!");
 
                         break;
 
@@ -53,7 +53,7 @@ namespace PizzaStore_UML2
                         if (customerToRemove != null)
                         {
                             store.DeleteCustomer(customerToRemove);
-                            Console.WriteLine("Customer removed successfully!");
+                            Console.WriteLine("Customer successfully removed!");
                         }
 
                         else
@@ -89,17 +89,17 @@ namespace PizzaStore_UML2
                             Console.WriteLine("Invalid input! Please enter a valid price.");
                         }
                         store.CreatePizza(new Pizza(pizzaName, pizzaPrice));
-                        Console.WriteLine("Pizza added successfully!");
+                        Console.WriteLine("Pizza successfully added!");
                         break;
 
                     case "5":
-                        Console.Write("Enter pizza name to remove: ");
+                        Console.Write("Enter pizzaname to remove: ");
                         string removePizzaName = Console.ReadLine()!;
                         Pizza removePizza = store.SearchPizza(removePizzaName);
                         if (removePizza != null)
                         {
                             store.DeletePizza(removePizza);
-                            Console.WriteLine("Pizza removed successfully!");
+                            Console.WriteLine("Pizza successfully removed!");
                         }
                         else
                         {
@@ -108,7 +108,7 @@ namespace PizzaStore_UML2
                         break;
 
                     case "6":
-                        Console.Write("Enter pizza name to search: ");
+                        Console.Write("Enter pizzaname to search: ");
                         string pizzaNameToSearch = Console.ReadLine()!;
                         Pizza searchedPizza = store.SearchPizza(pizzaNameToSearch);
                         if (searchedPizza != null)
@@ -138,24 +138,24 @@ namespace PizzaStore_UML2
 
                         Console.WriteLine("Available Pizzas: ");
                         store.ShowPizza();
-                        Console.Write("Enter a name of a pizza: ");
+                        Console.Write("Enter a pizzaname: ");
                         string pizzaNameForOrder = Console.ReadLine()!;
                         Pizza selectedPizza = store.SearchPizza(pizzaNameForOrder);
 
                         if (selectedPizza == null)
                         {
-                            Console.WriteLine("Pizza not found!");
+                            Console.WriteLine("Couldn't find any pizza!");
                             break;
                         }
 
                         Order newOrder = new Order(selectedPizza, selectedCustomer);
                         store.OrderCreate(newOrder);
-                        Console.WriteLine("Order placed successfully!");
+                        Console.WriteLine("Order successfully placed!");
                         break;
 
                     case "8":
                         UntilOrderConfirm = false;
-                        Console.WriteLine("Exiting Pizza Store. Goodbye!");
+                        Console.WriteLine("Exiting Pizza Store. Have a great day!");
                         break;
 
                     default:
