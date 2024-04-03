@@ -39,7 +39,7 @@ namespace PizzaStore_UML2
                     case "1":
                         Console.Write("Enter name of customer: ");
                         string name = Console.ReadLine()!;
-                        Console.Write("Enter address of the customer: ");
+                        Console.Write("Enter address the customer: ");
                         string address = Console.ReadLine()!;
                         store.AddCustomer(new Customer(name, address));
                         Console.WriteLine("Customer successfully added!");
